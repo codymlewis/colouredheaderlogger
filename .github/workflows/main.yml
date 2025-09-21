@@ -4,9 +4,13 @@ on:
   push:
 jobs:
   tests:
-    runs-on: ghcr.io/astral-sh/uv:debian-slim
+    runs-on: ubuntu-latest
     steps:
     - name: Check out code
       uses: actions/checkout@v4
+    - name: Acquire uv
+      run: curl -LsSf https://astral.sh/uv/install.sh | sh
+    - name: Sync uv
+      run: uv sync --dev
     - name: Run tests
-      run: uv run --dev pytest
+      run: uv run pytest
