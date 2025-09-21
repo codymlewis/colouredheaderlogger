@@ -1,0 +1,12 @@
+name: "Tests"
+on:
+  pull_request:
+  push:
+jobs:
+  tests:
+    runs-on: ghcr.io/astral-sh/uv:debian-slim
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v4
+    - name: Run tests
+      run: uv run --dev pytest
