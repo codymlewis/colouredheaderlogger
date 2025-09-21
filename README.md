@@ -1,4 +1,5 @@
 # Coloured Header Logger
+[![Tests](https://github.com/codymlewis/colouredheaderlogger/actions/workflows/main.yml/badge.svg)](https://github.com/codymlewis/colouredheaderlogger/actions/workflows/main.yml)
 
 A formatter to colour only the header part of logs according to severity.
 
